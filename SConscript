@@ -8,3 +8,4 @@ src = []
 path = [cwd + '/Core/include']
 
 group = DefineGroup('Libraries', src, depend=[''], CPPPATH=path)
+Return('group')
