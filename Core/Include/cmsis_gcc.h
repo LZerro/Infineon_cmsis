@@ -25,6 +25,7 @@
 #ifndef __CMSIS_GCC_H
 #define __CMSIS_GCC_H
 
+#include <rtconfig.h>
 /* ignore some GCC warnings */
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wsign-conversion"
@@ -130,7 +131,12 @@
  */
 __STATIC_FORCEINLINE __NO_RETURN void __cmsis_start(void)
 {
+
+#if defined(SOC_SERIES_IFX_XMC)
+  extern int entry(void) __NO_RETURN;
+#else
   extern void _start(void) __NO_RETURN;
+#endif
 
   typedef struct {
     uint32_t const* src;
@@ -159,8 +165,11 @@ __STATIC_FORCEINLINE __NO_RETURN void __cmsis_start(void)
       pTable->dest[i] = 0u;
     }
   }
-
+#if defined(SOC_SERIES_IFX_XMC)
+  entry();
+#else
   _start();
+#endif
 }
 
 #define __PROGRAM_START           __cmsis_start
