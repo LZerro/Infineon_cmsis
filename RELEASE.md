@@ -1,4 +1,4 @@
-### CMSIS Version 5.8.0
+### CMSIS Version 5.8.2
 
 ### Overview
 Release is based on CMSIS_5 tag https://github.com/ARM-software/CMSIS_5/tree/5.8.0.
@@ -15,7 +15,7 @@ Release is based on CMSIS_5 tag https://github.com/ARM-software/CMSIS_5/tree/5.8
 * [COMPONENT_CMSIS_DSP]
  CMSIS DSP is an optimized compute library for embedded systems. Different variants are
   available according to the core and most of the functions are using a vectorized version
-  when the Helium or Neon extension is available.
+  when the Helium or Neon extension is available. It is based on https://github.com/ARM-software/CMSIS-DSP/releases/tag/v1.15.0
 
 ## More information
 
@@ -23,4 +23,4 @@ Release is based on CMSIS_5 tag https://github.com/ARM-software/CMSIS_5/tree/5.8
 * [Infineon](http://www.infineon.com)
 
 ---
-© Cypress Semiconductor Corporation (an Infineon company), 2022.
+© Cypress Semiconductor Corporation (an Infineon company), 2024.
